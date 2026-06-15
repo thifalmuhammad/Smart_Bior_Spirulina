@@ -1,0 +1,6 @@
+{
+  "name": "Smart BioReactor Dashboard",
+  "description": "Real-time monitoring and simulation dashboard for smart bioreactor sensor and OD data.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

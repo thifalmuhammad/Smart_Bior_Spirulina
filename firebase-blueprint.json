@@ -1,0 +1,54 @@
+{
+  "entities": {
+    "DataPoint": {
+      "title": "DataPoint",
+      "description": "Log telemetry status dan parameter biologi bioreaktor mikroalga",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier"
+        },
+        "day": {
+          "type": "string",
+          "description": "Nama hari saat logging"
+        },
+        "time": {
+          "type": "string",
+          "description": "Waktu logging terformat"
+        },
+        "timestamp": {
+          "type": "number",
+          "description": "Timestamp Unix Epoch"
+        },
+        "temperature": {
+          "type": "number",
+          "description": "Suhu terukur (°C)"
+        },
+        "opticalDensity": {
+          "type": "number",
+          "description": "Kepadatan Optik terukur (OD600)"
+        },
+        "phase": {
+          "type": "string",
+          "description": "Fase inkubasi sel alga"
+        },
+        "tempStatus": {
+          "type": "string",
+          "description": "Status kelayakan suhu"
+        },
+        "odStatus": {
+          "type": "string",
+          "description": "Status kepadatan sel"
+        }
+      },
+      "required": ["timestamp", "temperature", "opticalDensity"]
+    }
+  },
+  "firestore": {
+    "/datapoints/{dataPointId}": {
+      "schema": "DataPoint",
+      "description": "Koleksi data log telemetri bioreaktor"
+    }
+  }
+}
